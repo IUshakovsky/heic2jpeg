@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
+/* Body and HTML should take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Numans', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensure #app stretches to fill remaining space */
+    width: 100%;
+}
+
+/* Ensure the main content (container) grows to fill the remaining space */
+.container {
+    flex: 1;
+    margin-top: 20px; /* Adjust margin for the main container */
+}
+
+/* Title area */
+.title-area {
+    text-align: center;
+    padding: 25px 0; /* Adjust padding for a larger area */
+    background-color: #A97DA2; /* Darker, more striking background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    width: 100vw; /* Full width of the viewport */
+    position: relative;
+    left: 50%; /* Align background to full width */
+    transform: translateX(-50%);
+    color: white; /* White text for contrast */
+}
+
+/* Title */
+h2 {
+    font-weight: 900;
+    font-size: 48px;
+    margin: 0;
+}
+
+h6 {
+    text-align: center;
+}
+
+/* Conversion info line */
+.conversion-info {
+    font-size: 16px; /* Smaller text for info line */
+    margin: 10px 0 0; /* Spacing between title and info line */
+    opacity: 0.9; /* Slightly faded to differentiate from title */
+    font-weight: 400; /* Lighter font weight */
+}
+
+/* Drop area and content */
+.drop-area {
+    width: 60%;
+    height: 400px;
+    border: 2px dashed #7da2a9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    color: #555;
+    margin: 20px auto;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-area.dragover {
+    background-color: #e3f2fd;
+    border-color: #7da2a9;
+}
+
+/* Buttons */
+.upload-button, .clear-button, .convert-button {
+    padding: 16px 30px;
+    border: none;
+    background-color: #7da2a9; /* Button color */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-button:hover, .clear-button:hover, .convert-button:hover {
+    background-color: #6a9893; /* Hover color */
+    color: #333; /* Text color on hover */
+}
+
+.clear-button {
+    padding: 10px 20px;
+    display: block;
+    margin: 10px auto;
+}
+
+.upload-button{
+    margin: 0 10px 0 10px;
+}
+
+.convert-button {
+    /* padding: 25px 60px; */
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: block; /* Make the button a block element */
+    margin: 30px auto 30px auto; /* Center the button horizontally */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Divider and drop label */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #999;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+.drop-label {
+    font-size: 14px;
+    margin-top: 0;
+    color: rgba(85, 85, 85, 0.8);
+}
+
+/* Table styling */
+.table-container {
+    width: 60%;
+    border: 0.5px solid #ccc;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 4px;
+    background-color: #f7f7f7;
+}
+
+.file-name {
+    text-align: left;
+}
+
+.button-cell {
+    width: 60px;
+    text-align: center;
+}
+
+.button-cell .btn {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 9px;
+    border-top: 1px solid #ddd;
+    padding-top: 3px;
+    background-color: #f7f7f7;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer a {
+    color: #999;
+    text-decoration: none;
+    font-size: 9px;
+}
+
+/* Loader spinner */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #7da2a9;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto; /* Center the loader */
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
