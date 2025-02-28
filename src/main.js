@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import 'typeface-numans';
 
+import './analytics.js'
 import './styles.css';
 
 createApp(App).mount('#app')
