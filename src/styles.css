@@ -1,5 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+/* Responsive Upload and Drop Zone Styles */
+.drop-area, .upload-section {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.drop-area {
+  border: 2px dashed #aaa;
+  background-color: #f8f9fa;
+}
+
+.upload-section {
+  padding: 15px;
+  border: none;
+}
+
+.drop-area.dragover {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.upload-button {
+  margin: 10px 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #A97DA2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #8a6384;
+}
+
+.divider {
+  margin: 15px 0;
+  color: #666;
+  font-weight: 500;
+}
+
+.drop-label {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* Loader animation */
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #A97DA2;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .upload-section {
+    margin: 20px auto;
+  }
+  
+  .upload-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+    font-size: 18px; /* Larger touch target for mobile */
+  }
+  
+  /* Adjust table for mobile */
+  .table-container {
+    padding: 0 10px;
+  }
+  
+  .file-name {
+    font-size: 14px;
+    word-break: break-word;
+  }
+  
+  /* Make FAQ items more touch-friendly */
+  .faq-question {
+    padding: 18px 20px;
+  }
+  
+  /* Adjust footer spacing */
+  .footer p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer p span {
+    margin-top: 8px;
+    margin-left: 0 !important;
+  }
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  margin: 40px 0;
+  padding: 0 15px;
+}
+
+.faq-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.faq-question:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-answer {
+  padding: 15px 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
 
 /* Body and HTML should take up the full height */
 html, body {
